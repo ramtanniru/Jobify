@@ -4,9 +4,6 @@ body {
     .head{
         font-family:'Times New Roman', Times, serif;
     }
-  
-<<<<<<< HEAD
-}
 .sub-head{
   font-size: 24px;
   font-family: 'Montserrat';
@@ -51,7 +48,6 @@ body {
   border-radius: 0px;
   background-color: #ffffff;
 }
-=======
   
   .container {
     /* Container styles */
@@ -97,4 +93,3 @@ body {
   .left-side-container {
     background-color: #E2F0FF; /* Set the background color for the left side */
   }
->>>>>>> origin/main
