@@ -6,7 +6,7 @@ import bgImg1 from "../assets/img1.svg";
 import bgImg2 from "../assets/img2.svg";
 import bgImg3 from "../assets/img3.svg";
 import hi from '../assets/hi.svg';
-import './styles.css';
+// import './styles.css';
 import Axios from 'axios';
 
 export default function Login() {
