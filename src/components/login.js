@@ -59,7 +59,7 @@ export default function Login() {
               <h5 className=" fw-lighter text-dark-emphasis">Please login to access your account.</h5>
               <label htmlFor="username" className=" fs-5 form-label">Username</label>
               <input type="text" className="form-control" placeholder="Type your username" />
-              <label htmlFor="password" className="fs-5 form-label">Password</label>
+              <label htmlFor="password" className="fs-5 form-label obscured-text">Password</label>
               <input type="text" className="form-control" placeholder="Type your password" />
               <span style={mystyle}>Forgot Password?</span>
               <span style={mystyle}>Login as</span>
