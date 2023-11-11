@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@50;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@50;400&display=swap');
-@import url('https://fonts.cdnfonts.com/css/emilio-test');
-
-
-div{
+body {
+    font-family: 'Montserrat, sans-serif';
+    }
+    .head{
+        font-family:'Times New Roman', Times, serif;
+    }
   
+<<<<<<< HEAD
 }
 .sub-head{
   font-size: 24px;
@@ -50,3 +51,50 @@ div{
   border-radius: 0px;
   background-color: #ffffff;
 }
+=======
+  
+  .container {
+    /* Container styles */
+    margin-top: 25px; /* Adjust the margin-top to move the container down */
+  }
+  .form-container {
+    background-color: white;
+    border: 1px solid white; /* Set border color to match the background color */
+    border-radius: 0.25rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensure the form container takes the full height */
+  }
+  
+  .heading {
+    font-family: 'Emilio, sans-serif';
+    font-size: 48px;
+  }
+  
+  .form-label {
+    font-family: 'Montserrat, sans-serif';
+    font-size: 16px;
+  }
+  
+  .form-control {
+    background-color: white;
+    margin-bottom: 1rem; /* Add margin-bottom to create a gap between text boxes */
+  }
+  
+  .signup-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .signup-button {
+    /* Button styles */
+    font-size: 1.5rem; /* Set the font size of the button */
+    padding: 60px 60px; /* Adjust padding to increase button size */
+  }
+  .left-side-container {
+    background-color: #E2F0FF; /* Set the background color for the left side */
+  }
+>>>>>>> origin/main
