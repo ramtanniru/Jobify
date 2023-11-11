@@ -1,5 +1,5 @@
 import React from 'react'
-import Line from '../../assets/line.svg'
+
 const History = () => {
   return (
     <div className='mx-auto d-flex flex-column justify-content-center my-5 py-5'>
