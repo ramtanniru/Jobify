@@ -31,7 +31,7 @@ div{
 }
 .vertical-divider{
   border-top: 1px solid #0c0b0b;
-      height: 100px;
+  height: 100px;
 }
 .form-control{
   background-color: #ECF2F7;
@@ -42,4 +42,11 @@ div{
 }
 .tablet{
   font-size: 15px;
+}
+.contact input,.contact textarea{
+  border: 0px;
+  border-bottom: 1px solid #00000050;
+  text-decoration: none;
+  border-radius: 0px;
+  background-color: #ffffff;
 }
