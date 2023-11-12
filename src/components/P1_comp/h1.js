@@ -25,7 +25,7 @@ const H1 = () => {
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 20.9988L9.28875 20.1123C10.1838 19.0899 10.9888 18.1199 11.705 17.1972L12.2962 16.4192C14.765 13.1015 16 10.4682 16 8.52197C16 4.36762 12.6425 1 8.5 1C4.3575 1 1 4.36762 1 8.52197C1 10.4682 2.235 13.1015 4.70375 16.4192L5.295 17.1972C6.3168 18.5031 7.38584 19.7703 8.5 20.9988Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M8.5 11.5978C10.2259 11.5978 11.625 10.2023 11.625 8.48078C11.625 6.7593 10.2259 5.36377 8.5 5.36377C6.77411 5.36377 5.375 6.7593 5.375 8.48078C5.375 10.2023 6.77411 11.5978 8.5 11.5978Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              <input className='search-input form-control' placeholder='Enter location'/>
+              <input className='search-input form-control' placeholder='Enter job title'/>
             </div>
             <div>
                 <button className='btn btn-primary px-4 py-1'>Explore</button>
