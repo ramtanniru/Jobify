@@ -5,7 +5,7 @@ import bgImg3 from '../assets/img3.svg';
 export default function Carousel(){
     return(
         
-            <div className="col-2 col-sm-5 col-md-6">
+            <div className="col-2 w-100 ">
             <div id="carouselExampleAutoplaying"  class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item " data-bs-interval="2000">

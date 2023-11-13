@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* > * {
+    font-family: "Poppins", cursive;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+
+body{
+  background: #011313;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #243e3c, #2b6363, #0c2918);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right,#42ADC5, #003846, #13252C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100%;
+}
+
+
+.register > * {
+    margin: 0;
+    padding: 0;
+  }
+  
+.register{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+  /* box-shadow: 1px 3px 10px #e9ecef; */
+  background-color: white;
+  
+}
+.ui.message.text-danger {
+    margin: 0;  
+    padding: 0; 
+  }
+  
+
+.register span{
+  color: #595b5f;
+}
+/* Add this CSS to your stylesheet */
+
+
+
+#form{
+  max-width: 350px;
+  width: 100vw;
+  margin: 1.5em auto;
+  font-family: "Montserrat";
+  font-size: 18;
+}
+
+#form >  input, .btn{
+  border: 1px solid #e9ecef;
+  padding: .9em 1em;
+}
+
+#form > input:focus{
+  outline: none;
+}
+#form >h2{
+  font-family: "Emilio Test";
+  font-size: 48;
+}
+
+
+#form > span{
+  font-family: "Montserrat";
+  font-size: 18px;
+}
+#form > p{
+  color: #2ba4e4;
+}
+
+.flex{
+  display: flex;
+  gap: 0.5em;
+}
+
+.flex-col{
+  flex-direction: column;
+}
+
+.register .col-1{
+  margin: auto;
+  /* width: 50%; */
+  
+}
+
+.register .col-2 img{
+  width: 50%;
+  height: 100vh;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: none;
+}
+.col-2{
+  background-color: #E2F0FF;
+} 
+#form p,label{
+  color: black;
+  font-family: "Montserrat";
+  font-size: 18px;
+}
+
+.btns{
+  width: 140px;
+}
+.error{
+  color: red;
+}
+.success{
+  color: green;
+}
+.carousel-caption{
+  color: black;
+}
+.carousel-caption h5{
+  font-family: "Emilio Test";
+  font-size: 48;
+  font-weight: 600;
+}
+.carousel-caption p{
+  font-family: "Montserrat";
+  font-size: 18;
+  color: rgb(75, 73, 73);
+}
+#form input{
+  font-family: "Montserrat";
+  font-size: 18;
+}

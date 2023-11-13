@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Carousel from "../components/Carousel";
-import {Link} from 'react-router-dom';
+import "../Style.css";
 
 export default function Signup(){
     const mystyle={
@@ -47,9 +47,8 @@ export default function Signup(){
 
   return (
     <div className="register">
-      {/* <div className="row"> */}
         
-         <Carousel/>
+        <div className='col-md-6'><Carousel/></div>
 
        
         <div className="col-1 col-md-6 container">
@@ -127,7 +126,7 @@ export default function Signup(){
                   Sign Up
                 </button>
               </div>
-              <div className='text-center'><p>Already have an Account?<Link to="/login"><span style={mystyle}>Login</span></Link></p></div>
+              <div className='text-center'><p>Already have an Account?<span style={mystyle}>Login</span></p></div>
               
             </form>
           </div>
