@@ -2,13 +2,14 @@ import React from "react";
 import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import './styles.css';
+import logo from '../Icon/logo.svg';
 
 const Header = () => {
   return (
-    <nav class="navbar navbar-expand-sm navbar-light bg-light px-sm-3 shadow">
-      <div class="container-fluid col-12">
-        <a class="navbar-brand col-1" href="#">
-          <span className=" fw-bold ">Job</span><span className="text-primary fw-bold">ify.</span>
+    <nav className="navbar navbar-expand-sm navbar-light bg-light px-sm-3 shadow fixed-top">
+      <div className="container-fluid col-12">
+        <a className="navbar-brand d-flex flex-row gap-2 col-1" href="#">
+          <img src={logo} height={40}/><span className="head-sub-head fw-bold grad ">Jobify!</span>
         </a>
         <button
           class="navbar-toggler"

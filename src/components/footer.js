@@ -8,7 +8,7 @@ const Footer = () => {
             <div className='my-5'></div>
             <div className='position-absolute start-50 translate-middle col-10 mt-5 p-3 mx-auto shadow rounded-3 bg-white'>
                 <div className='mb-4 py-2'>
-                    <h1 className='sub-head fw-bold'>Looking for a change in career?<span className='text-primary'>Apply for a Job</span></h1>
+                    <h1 className='head-sub-head fw-bold'>Looking for a change in career?<span className='text-primary'>Apply for a Job</span></h1>
                     <p className='body m-0 col-11 mx-auto'>"Experience the magic of design as we reveal the creation of our website in our latest YouTube video. Join us on a visual journey from concept to reality, behind our digital presence."</p>
                 </div>
                 <button className='btn btn-primary py-2 px-5'>Apply now</button>
