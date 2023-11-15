@@ -5,21 +5,21 @@ const H1 = () => {
   return (
     <div className='bg-blue py-5'>
         {/* text */}
-        <div className='py-4 col-8 mx-auto my-5 mb-4 d-flex flex-column text-center'>
+        <div className='py-4 col-8 mx-auto mb-4 d-flex flex-column text-center'>
             <h6 className='text-primary fw-bold sub-head'>Find your dream</h6>
             <h1 className='head mb-4'>Unleashing Oppurtunities, Empowering Careers. Welcome to <span className='grad'>Jobify!</span></h1>
             <h6 className='body col-10 mx-auto'>Our platform is dedicated to helping you discover, apply, and succeed in your dream career.
                 Jobify, where opportunities meet ambition.</h6>
         </div>
         {/* search */}
-        <div className='d-flex flex-row align-items-center justify-content-between my-5 bg-white rounded-3 shadow col-7 mx-auto py-3 px-5'>
+        <div className='d-flex flex-row align-items-center justify-content-around my-5 bg-white rounded-3 shadow col-7 mx-auto py-3 px-5'>
             <div className='d-flex flex-row gap-3 align-items-center'>
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path d="M14.2939 12.5786H13.3905L13.0703 12.2699C14.2297 10.9251 14.8669 9.20834 14.8656 7.43282C14.8656 5.96275 14.4297 4.52569 13.613 3.30337C12.7963 2.08105 11.6354 1.12837 10.2772 0.565793C8.91907 0.00322052 7.42457 -0.143974 5.98275 0.142823C4.54092 0.42962 3.21652 1.13753 2.17702 2.17702C1.13753 3.21652 0.42962 4.54092 0.142823 5.98275C-0.143974 7.42457 0.00322052 8.91907 0.565793 10.2772C1.12837 11.6354 2.08105 12.7963 3.30337 13.613C4.52569 14.4297 5.96275 14.8656 7.43282 14.8656C9.27387 14.8656 10.9663 14.191 12.2699 13.0703L12.5786 13.3905V14.2939L18.2962 20L20 18.2962L14.2939 12.5786ZM7.43282 12.5786C4.58548 12.5786 2.28702 10.2802 2.28702 7.43282C2.28702 4.58548 4.58548 2.28702 7.43282 2.28702C10.2802 2.28702 12.5786 4.58548 12.5786 7.43282C12.5786 10.2802 10.2802 12.5786 7.43282 12.5786Z" fill="black"/>
               </svg>
               <input className='search-input form-control' placeholder='Enter job title'/>
             </div>
-            <div style={{width:1, height:42, backgroundColor:'rgb(0, 0, 0, 0.33)'}}></div>
+            <div style={{width:1, height:42, backgroundColor:'rgb(0, 0, 0, 0.33)'}} className='mx-5'></div>
             <div className='d-flex flex-row gap-3 align-items-center'>
               <svg xmlns="http://www.w3.org/2000/svg" width="17" height="22" viewBox="0 0 17 22" fill="none">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 20.9988L9.28875 20.1123C10.1838 19.0899 10.9888 18.1199 11.705 17.1972L12.2962 16.4192C14.765 13.1015 16 10.4682 16 8.52197C16 4.36762 12.6425 1 8.5 1C4.3575 1 1 4.36762 1 8.52197C1 10.4682 2.235 13.1015 4.70375 16.4192L5.295 17.1972C6.3168 18.5031 7.38584 19.7703 8.5 20.9988Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>

@@ -22,7 +22,7 @@ const Header = () => {
         </button>
         <div class="collapse navbar-collapse col-11" id="navbarSupportedContent">
           <div className="col-lg-4 col-md-3 col-sm-2"></div>
-          <ul class="navbar-nav mb-2 mb-lg-0 col-lg-6 col-sm-7 col-md-7 gap-sm-3">
+          <ul class="col-lg-6 navbar-nav mb-2 mb-lg-0 col-sm-7 col-md-7 gap-sm-3">
             <li class="nav-item">
               <a class="nav-link active fw-bold" aria-current="page" href="#">
                 HOME
@@ -37,7 +37,7 @@ const Header = () => {
               <a className="nav-link fw-bold" href="#h4">ABOUT US</a>
             </li>
           </ul>
-          <div className="col-lg-2 col- d-flex flex-row align-items-center gap-5">
+          <div className="col-lg-2 d-flex flex-row align-items-center justify-content-around">
             <a>
                 Sign up
             </a>

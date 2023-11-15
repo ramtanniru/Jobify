@@ -6,7 +6,7 @@ const C4 = ({arr,colour}) => {
         color : colour,
     };
   return (
-    <div className='shadow p-4 rounded-3 d-flex flex-column justify-content-between gap-4 col-3'>
+    <div className='shadow p-3 rounded-3 d-flex flex-column justify-content-between gap-4 col-3'>
         <div className='d-flex flex-column gap-3'>
             <div className='d-flex flex-row gap-3'>
                 <div className='py-2 px-3 rounded-3 text-center d-flex align-items-center' style={myStyle}><h2 className='body fw-bold m-0 tablet'>{arr.role}</h2></div>
@@ -38,11 +38,11 @@ const C4 = ({arr,colour}) => {
             </div>
             <hr/>
             <div className='d-flex flex-row justify-content-between'>
-                <div className='d-flex flex-row align-items-center gap-3'>
+                <div className='d-flex flex-row align-items-center gap-2'>
                     <img src={arr.logo}/>
                     <p className='m-0 body'>{arr.company}</p>
                 </div>
-                <div className='d-flex flex-row align-items-center gap-2'>
+                <div className='d-flex flex-row align-items-center gap-1'>
                     <p className='body fw-bold text-primary m-0'>Apply now</p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="23" height="20" viewBox="0 0 23 20" fill="none">
                         <path d="M23.0262 10.8435L14.5887 19.281C14.3245 19.5451 13.9662 19.6936 13.5926 19.6936C13.219 19.6936 12.8607 19.5451 12.5965 19.281C12.3323 19.0168 12.1839 18.6585 12.1839 18.2849C12.1839 17.9113 12.3323 17.5529 12.5965 17.2888L18.6328 11.2548H1.40625C1.03329 11.2548 0.675604 11.1066 0.411881 10.8429C0.148158 10.5792 0 10.2215 0 9.84853C0 9.47557 0.148158 9.11789 0.411881 8.85416C0.675604 8.59044 1.03329 8.44228 1.40625 8.44228H18.6328L12.5988 2.40478C12.3346 2.1406 12.1862 1.7823 12.1862 1.40869C12.1862 1.03508 12.3346 0.676776 12.5988 0.412595C12.863 0.148415 13.2213 5.56719e-09 13.5949 0C13.9685 -5.56719e-09 14.3268 0.148415 14.591 0.412595L23.0285 8.85009C23.1596 8.98092 23.2636 9.13635 23.3345 9.30748C23.4054 9.4786 23.4418 9.66204 23.4415 9.84726C23.4413 10.0325 23.4045 10.2158 23.3332 10.3868C23.262 10.5578 23.1576 10.7129 23.0262 10.8435Z" fill="#437BFA"/>

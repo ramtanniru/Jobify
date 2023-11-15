@@ -11,6 +11,7 @@ const H2 = () => {
   return (
     <div className='py-5' style={{backgroundColor:"#FAFAFA"}}>
         <div className='d-flex flex-row py-5 col-11 mx-auto justify-content-around align-items-center'>
+            {/* Text */}
             <div className='text-start col-4'>
                 <h6 className='sub-head text-primary fw-bold'>How it Works</h6>
                 <h1 className='head'>Quick Steps in Getting a Job</h1>
@@ -21,7 +22,7 @@ const H2 = () => {
                 Jobify.
                 </p>
             </div>
-            <div className='col-6 d-flex flex-row align-items-center'>
+            <div className='col-7 d-flex flex-row gap-4 align-items-center'>
                 <div className='col-1'>
                     <p className='body fw-bold m-2' style={{color:"#55C2F8"}}>01</p>
                     <div>

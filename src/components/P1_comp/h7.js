@@ -14,13 +14,13 @@ const H7 = () => {
             img:blog1,
             date:"May 1, 2023",
             head:"How to create a Design Agency Website",
-            body:"Experience the magic of design as we reveal the creation of our website in our latest YouTube video. Join us on a visual journey from concept to reality, exploring the art and craftsmanship behind our digital presence."
+            body:"Experience the magic of design as we reveal the creation of our website in our latest YouTube video. Join us on a visual journey from concept to reality ..."
         },
         {
             img:blog2,
             date:"June 5, 2023",
             head:"Job Application Submission To make it Easier for Us",
-            body:"Simplify your job application process with our latest video guide. Learn efficient tips and tricks to streamline your submission, ensuring a smoother and more successful application experience."
+            body:"Simplify your job application process with our latest video guide. Learn efficient tips and tricks to streamline your submission ..."
         }
     ]
     const arr =[

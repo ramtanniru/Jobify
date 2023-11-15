@@ -7,8 +7,8 @@ import Stepper from './components/Stepper';
 function App() {
   return (
     <div className="App">
-      {/* <About/> */}
-      <Stepper/>
+      <Home/>
+      
     </div>
   );
 }
