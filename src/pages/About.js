@@ -7,10 +7,8 @@ import History from '../components/Abt_comp/History'
 const About = () => {
   return (
     <div>
-        <Header/>
         <History/>
         <Contact/>
-        <Footer/>
     </div>
   )
 }

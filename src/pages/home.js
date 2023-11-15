@@ -12,7 +12,6 @@ import Footer from '../components/footer';
 const Home = () => {
   return (
     <div>
-        <Header/>
         <H1/>
         <H2/>
         <H3/>
@@ -20,7 +19,6 @@ const Home = () => {
         <H5/>
         <H6/>
         <H7/>
-        <Footer/>
     </div>
   )
 }
