@@ -14,6 +14,7 @@ body{
   background: -webkit-linear-gradient(to right, #243e3c, #2b6363, #0c2918);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right,#42ADC5, #003846, #13252C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   height: 100%;
+  position: fixed;
 }
 
 
@@ -81,6 +82,11 @@ body{
   display: flex;
   gap: 0.5em;
 }
+.flex1{
+  display: flex;
+  gap: 0.1em;
+}
+
 
 .flex-col{
   flex-direction: column;
