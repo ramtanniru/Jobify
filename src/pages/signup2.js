@@ -21,39 +21,60 @@ export default function Signup() {
 
   const [qualification, setQualification] = useState('');
   const [institutionName, setInstitutionName] = useState('');
-  const [degree, setDegree] = useState('');
   const [graduationYear, setGraduationYear] = useState('');
-  const [registrationNumber, setRegistrationNumber] = useState('');
+  const[fieldName,setFieldName]=useState('');
 
-  const [position, setPosition] = useState('');
+
   const [workStatus, setWorkStatus] = useState('');
-  const [skills, setSkills] = useState('');
+  const [skills, setSkills] = useState([]);
   const [resume, setResume] = useState('');
-  const [licenses, setLicenses] = useState('');
+
+  const [newSkill, setNewSkill] = useState('');
+
+
 
   const [qualificationError, setQualificationError] = useState(false);
   const [institutionNameError, setInstitutionNameError] = useState(false);
-  const [degreeError, setDegreeError] = useState(false);
-  const [graduationYearError, setGraduationYearError] = useState(false);
-  const [registrationNumberError, setRegistrationNumberError] = useState(false);
 
-  const [positionError, setPositionError] = useState(false);
+  const [graduationYearError, setGraduationYearError] = useState(false);
+  const [FieldNameError,setFieldNameError]=useState(false);
+
   const [workStatusError, setWorkStatusError] = useState(false);
   const [skillsError, setSkillsError] = useState(false);
-  const [resumeError, setResumeError] = useState(false);
-  const [licensesError, setLicensesError] = useState(false);
+  const [resumeError,setResumeError]=useState(false);
+
 
   const [usernameError, setUsernameError] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
   const [confirmPasswordError, setConfirmPasswordError] = useState(false);
   const [mobileNumberError, setMobileNumberError] = useState(false);
+  const [linkedinProfile, setLinkedinProfile] = useState('');
+    const [linkedinProfileError, setLinkedinProfileError] = useState(false);
 
   const handleInputChange = (e, setter, setError) => {
     const value = e.target.value;
     setter(value);
     setError(!value.trim());
   };
+  const addSkill = () => {
+    if (newSkill.trim() !== '') {
+      setSkills((prevSkills) => [...prevSkills, newSkill.trim()]);
+      setNewSkill('');
+      setSkillsError(false);
+    } else {
+      if (skills.length === 0) {
+        setSkillsError(true);
+      } else {
+        setSkillsError(false);
+      }
+    }
+  };
+  
+const removeSkill = (skillToRemove) => {
+  const updatedSkills = skills.filter((skill) => skill !== skillToRemove);
+  setSkills(updatedSkills);
+};
 
   const handleNext = () => {
     switch (activeStep) {
@@ -70,22 +91,20 @@ export default function Signup() {
         break;
       case 1:
         setQualificationError(!qualification.trim());
-        setInstitutionNameError(!institutionName.trim());
-        setDegreeError(!degree.trim());
+        setInstitutionNameError(!institutionName.trim()); 
         setGraduationYearError(!graduationYear.trim());
-        setRegistrationNumberError(!registrationNumber.trim());
-        if (!qualification || !institutionName || !degree || !graduationYear || !registrationNumber) {
+        setFieldNameError(!fieldName.trim());
+        if (!qualification || !institutionName  || !graduationYear || !fieldName ) {
           alert('Please fill in all fields correctly before proceeding.');
           return;
         }
         break;
       case 2:
-        setPositionError(!position.trim());
         setWorkStatusError(!workStatus.trim());
         setSkillsError(!skills.trim());
         setResumeError(!resume.trim());
-        setLicensesError(!licenses.trim());
-        if (!position || !workStatus || !skills || !resume || !licenses) {
+        setLinkedinProfileError(!linkedinProfile.trim());
+        if ( !workStatus || !skills || !resume || !linkedinProfile) {
           alert('Please fill in all fields correctly before proceeding.');
           return;
         }
@@ -99,21 +118,68 @@ export default function Signup() {
   const handleBack = () => {
     setActiveStep((prevStep) => prevStep - 1);
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // ... validation and submission logic for all fields
-
-    if (
-      !username.trim() || !email.trim() || !password.trim() ||
-      password !== confirmPassword || !confirmPassword.trim() || !mobileNumber.trim()
-    ) {
-      alert('Form contains errors. Please fill in all fields correctly.');
+  
+    let hasError = false;
+  
+    switch (activeStep) {
+      case 0:
+        setUsernameError(!username.trim());
+        setEmailError(!email.trim());
+        setPasswordError(!password.trim());
+        setConfirmPasswordError(password !== confirmPassword || !confirmPassword.trim());
+        setMobileNumberError(!mobileNumber.trim());
+        if (!username || !email || !password || password !== confirmPassword || !confirmPassword || !mobileNumber) {
+          hasError = true;
+        }
+        break;
+      case 1:
+        setQualificationError(!qualification.trim());
+        setInstitutionNameError(!institutionName.trim());
+        setGraduationYearError(!graduationYear.trim());
+        setFieldNameError(!fieldName.trim());
+        if (!qualification || !institutionName || !graduationYear || !fieldName) {
+          hasError = true;
+        }
+        break;
+      case 2:
+        setWorkStatusError(!workStatus.trim());
+        setSkillsError(skills.length === 0);
+        setResumeError(!resume);
+        setLinkedinProfileError(!linkedinProfile.trim());
+        if (!workStatus || skills.length === 0 || !resume || !linkedinProfile) {
+          hasError = true;
+        }
+        break;
+      default:
+        break;
+    }
+  
+    if (hasError) {
+      alert('Please fill in all fields correctly before proceeding.');
     } else {
       alert('Form submitted successfully!');
     }
   };
+  
+  const years = [];
+    for (let year = 1999; year <= 2027; year++) {
+        years.push(year);
+    }
+    const handleFileChange = (e) => {
+      const selectedFile = e.target.files[0];
+  
+      if (selectedFile) {
+        setResume(selectedFile);
+        setResumeError(false);
+      } else {
+        setResume(null);
+        setResumeError(true);
+      }
+    };
+   
+
 
   const getStepContent = (step) => {
     switch (step) {
@@ -130,7 +196,7 @@ export default function Signup() {
                 onChange={(e) => handleInputChange(e, setUsername, setUsernameError)}
               />
             </div>
-            <div className="mb-3">
+            <div className="mb-2">
               <label className="form-label">Email ID</label>
               <input
                 type="email"
@@ -140,7 +206,7 @@ export default function Signup() {
                 onChange={(e) => handleInputChange(e, setEmail, setEmailError)}
               />
             </div>
-            <div className="mb-3">
+            <div className="mb-2">
               <label className="form-label">Password</label>
               <input
                 type="password"
@@ -150,7 +216,7 @@ export default function Signup() {
                 onChange={(e) => handleInputChange(e, setPassword, setPasswordError)}
               />
             </div>
-            <div className="mb-3">
+            <div className="mb-2">
               <label className="form-label">Confirm Password</label>
               <input
                 type="password"
@@ -160,7 +226,7 @@ export default function Signup() {
                 onChange={(e) => handleInputChange(e, setConfirmPassword, setConfirmPasswordError)}
               />
             </div>
-            <div className="mb-3">
+            <div className="mb-2">
               <label className="form-label">Mobile Number</label>
               <input
                 type="tel"
@@ -175,6 +241,7 @@ export default function Signup() {
         case 1:
             return (
               <>
+              <div className='my-3'>
                 <div className="mb-3">
                   <label className="form-label">Educational Qualification</label>
                   <input
@@ -196,94 +263,117 @@ export default function Signup() {
                   />
                 </div>
                 <div className="mb-3">
-                  <label className="form-label">Degree/Course</label>
+                  <label className="form-label">Field of Study</label>
                   <input
                     type="text"
-                    className={`form-control ${degreeError ? 'is-invalid' : ''}`}
-                    placeholder="Type Your Degree"
-                    value={degree}
-                    onChange={(e) => handleInputChange(e, setDegree, setDegreeError)}
+                    className={`form-control ${FieldNameError ? 'is-invalid' : ''}`}
+                    placeholder="Type Your Field of study"
+                    value={fieldName}
+                    onChange={(e) => handleInputChange(e, setFieldName, setFieldNameError)}
                   />
                 </div>
-                <div className="mb-3">
-                    <label className="form-label">Graduation Year</label>
-                    <input
-                        type="text"
-                        className={`form-control ${graduationYearError ? 'is-invalid' : ''}`}
-                        placeholder="Type Your Graduation Year"
-                        value={graduationYear}
-                        onChange={(e) => handleInputChange(e, setGraduationYear, setGraduationYearError)}
-                    />
-                </div>
-                <div className="mb-3">
-                    <label className="form-label">Registration Number</label>
-                    <input
-                        type="text"
-                        className={`form-control ${registrationNumberError ? 'is-invalid' : ''}`}
-                        placeholder="Type Your Registration Number"
-                        value={registrationNumber}
-                        onChange={(e) => handleInputChange(e, setRegistrationNumber, setRegistrationNumberError)}
-                    />
-                </div>
+               
+                <div className="mb-3" style={{fontFamily:"Montserrat",color:"rgb(75, 73, 73)"}}>
+                  <label className="form-label">Graduation Year</label>
+                  <select
+                      className={`form-control ${graduationYearError ? 'is-invalid' : ''}`}
+                      value={graduationYear}
+                      onChange={(e) => handleInputChange(e, setGraduationYear, setGraduationYearError)}
+                      style={{fontFamily:"Montserrat",color:"rgb(75, 73, 73)"}}
+                  >
+                      <option value="">Select Graduation Year</option>
+                      {years.map((year) => (
+                          <option key={year} value={year}>
+                              {year}
+                          </option>
+                      ))}
+                  </select>
+              </div>
+              </div>
               </>
             );
             case 2:
                 return (
                     <>
+                     
+
+                     <div className="mb-3 my-3" style={{fontFamily:"Montserrat",color:"#9E9E9E "}}>
+                          <label className="form-label">Work Status</label>
+                          <select style={{fontFamily:"Montserrat",color:"rgb(75, 73, 73)"}}
+                              className={`form-control ${workStatusError ? 'is-invalid' : ''}`}
+                              value={workStatus}
+                              onChange={(e) =>
+                                  handleInputChange(e, setWorkStatus, setWorkStatusError)
+                              }
+                          >
+                              <option value="">Select Your Work Status</option>
+                              <option value="Employed">Employed</option>
+                              <option value="Unemployed">Unemployed</option>
+                              <option value="Self-Employed">Self-Employed</option>
+                             
+                          </select>
+                        
+                      </div>
+
                       <div className="mb-3">
-                        <label className="form-label">Position</label>
-                        <input
-                            type="text"
-                            className={`form-control ${positionError ? 'is-invalid' : ''}`}
-                            placeholder="Type Your Position"
-                            value={position}
-                            onChange={(e) => handleInputChange(e, setPosition, setPositionError)}
-                        />
+                            <label className="form-label">Skills</label>
+                            <div className="form-control" style={{ fontSize: '1.0em' }}>
+                                {skills.map((skill, index) => (
+                                    <div key={index} className="badge bg-light text-dark bordered m-1"  style={{
+                                      fontSize: 'inherit',
+                                      border: '1px solid #ccc',
+                                      padding: '5px',
+                                      borderRadius: '5px',
+                                      display: 'inline-flex',
+                                      alignItems: 'center',
+                                  }}>
+                                        {skill}
+                                        <span
+                                            className="badge bg-danger ms-1"
+                                            style={{ cursor: 'pointer' }}
+                                            onClick={() => removeSkill(skill)}
+                                        >
+                                            &times;
+                                        </span>
+                                    </div>
+                                ))}
+                                <input
+                                    type="text"
+                                    className={`form-control ${skillsError ? 'is-invalid' : ''}`}
+                                    placeholder="Type Your Skills"
+                                    value={newSkill}
+                                    onChange={(e) => setNewSkill(e.target.value)}
+                                    onBlur={addSkill}
+                                    onKeyPress={(e) => {
+                                        if (e.key === 'Enter') addSkill();
+                                    }}
+                                />
+                            </div>
+                            
                         </div>
 
                         <div className="mb-3">
-                        <label className="form-label">Work Status</label>
-                        <input
-                            type="text"
-                            className={`form-control ${workStatusError ? 'is-invalid' : ''}`}
-                            placeholder="Type Your Work Status"
-                            value={workStatus}
-                            onChange={(e) => handleInputChange(e, setWorkStatus, setWorkStatusError)}
-                        />
-                        </div>
-
-                        <div className="mb-3">
-                        <label className="form-label">Skills</label>
-                        <input
-                            type="text"
-                            className={`form-control ${skillsError ? 'is-invalid' : ''}`}
-                            placeholder="Type Your Skills"
-                            value={skills}
-                            onChange={(e) => handleInputChange(e, setSkills, setSkillsError)}
-                        />
-                        </div>
-
-                        <div className="mb-3">
-                        <label className="form-label">Resume</label>
-                        <input
-                            type="text"
+                          <label className="form-label">Resume</label>
+                          <input
+                            type="file"
                             className={`form-control ${resumeError ? 'is-invalid' : ''}`}
-                            placeholder="Type Your Resume"
-                            value={resume}
-                            onChange={(e) => handleInputChange(e, setResume, setResumeError)}
-                        />
+                            onChange={handleFileChange}
+                          />
+                          {resumeError && <p style={{ color: 'red' }}>Please upload a valid resume</p>}
+                          {resume && <p>Selected file: {resume.name}</p>}
                         </div>
                         <div className="mb-3">
-                        <label className="form-label">Licenses</label>
-                        <input
-                            type="text"
-                            className={`form-control ${licensesError ? 'is-invalid' : ''}`}
-                            placeholder="Type Your Licenses"
-                            value={licenses}
-                            onChange={(e) => handleInputChange(e, setLicenses, setLicensesError)}
-                        />
-                        </div>
-
+                          <label className="form-label">LinkedIn Profile</label>
+                          <input
+                              type="text"
+                              className={`form-control ${linkedinProfileError ? 'is-invalid' : ''}`}
+                              placeholder="Enter Your LinkedIn Profile URL"
+                              value={linkedinProfile}
+                              onChange={(e) =>
+                                  handleInputChange(e, setLinkedinProfile, setLinkedinProfileError)
+                              }
+                          />
+                      </div>
                     </>
                   );
 
@@ -311,7 +401,7 @@ export default function Signup() {
               ))}
             </Stepper>
           </div>
-          <div className='d-flex flex-row justify-content-center' style={{  gap: '20px' }}>
+          <div className='d-flex flex-row justify-content-center my-1' style={{  gap: '20px' }}>
             <Button disabled={activeStep === 0} variant="contained" onClick={handleBack}>
               Back
             </Button>
@@ -325,7 +415,11 @@ export default function Signup() {
               </Button>
             )}
           </div>
-          <div className='text-center mt-2'><p>Already have an account? <span style={mystyle}>Login</span></p></div>
+          <div className='text-center'>
+  <p style={{ marginBottom: '3px' }}>Already have an account? <span style={mystyle}>Login</span></p>
+  <p style={{ marginTop: '3px' }}>Do you want to sign up as a Recruiter? <span style={mystyle}>Click Here</span></p>
+</div>
+
         </div>
       </div>
     </div>

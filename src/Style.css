@@ -1,27 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 * > * {
-    font-family: "Poppins", cursive;
     margin: 0;
 }
-* {
-    box-sizing: border-box;
-  }
-  
+
 
 body{
-  background: #011313;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #243e3c, #2b6363, #0c2918);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right,#42ADC5, #003846, #13252C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 100%;
-  position: fixed;
+  height: 100vh;
+  position: relative;
+  overflow-y: auto; 
 }
-
-
-.register > * {
-    margin: 0;
-    padding: 0;
-  }
   
 .register{
   
@@ -31,8 +19,10 @@ body{
   width: 100vw;
   border: 1px solid #e9ecef;
   border-radius: 5px;
-  /* box-shadow: 1px 3px 10px #e9ecef; */
   background-color: white;
+  background: linear-gradient(to right, #E2F0FF 50%, #FFFF 50%);
+  
+  
   
 }
 .ui.message.text-danger {
@@ -44,12 +34,8 @@ body{
 .register span{
   color: #595b5f;
 }
-/* Add this CSS to your stylesheet */
-
-
-
 #form{
-  max-width: 350px;
+  max-width: 370px;
   width: 100vw;
   margin: 1.5em auto;
   font-family: "Montserrat";
@@ -94,7 +80,8 @@ body{
 
 .register .col-1{
   margin: auto;
-  /* width: 50%; */
+  background-color: white;
+  width: 50%;
   
 }
 
@@ -107,6 +94,8 @@ body{
 }
 .col-2{
   background-color: #E2F0FF;
+  position: relative;
+  width: 50%;
 } 
 #form p,label{
   color: black;
@@ -140,3 +129,4 @@ body{
   font-family: "Montserrat";
   font-size: 18;
 }
+

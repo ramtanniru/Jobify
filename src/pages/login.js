@@ -71,9 +71,6 @@ export default function Form() {
 
   const validate = (values) => {
     const errors = {};
-    var lowerCase = /[a-z]/g;
-    var upperCase = /[A-Z]/g;
-    var numbers = /[0-9]/g;
 
     if (!values.username) {
       errors.username = 'Username is required!';
@@ -81,21 +78,6 @@ export default function Form() {
     }
     if (!values.password) {
       errors.password = 'Password is required!';
-       
-    } else if (values.password.length < 4) {
-      errors.password = 'Password must be more than 4 characters';
-       
-    } else if (values.password.length > 10) {
-      errors.password = 'Password cannot exceed more than 10 characters';
-       
-    } else if (!values.password.match(lowerCase)) {
-      errors.password = 'Password should contain lowercase letters!';
-       
-    } else if (!values.password.match(upperCase)) {
-      errors.password = 'Password should contain uppercase letters!';
-       
-    } else if (!values.password.match(numbers)) {
-      errors.password = 'Password should include numbers!';
        
     }
 
