@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Home from './pages/home';
 import Jobs from './pages/Jobs';
@@ -9,11 +8,13 @@ import Header from './components/nav';
 import Footer from './components/footer';
 import Header_2 from './components/Signed_nav';
 import Profile from './pages/Profile';
+import Hrprofile from './pages/hrprofile';
 
 function App() {
   return (
     <div className="App">
-      <Header_2/>
+      {/* <Header_2/> */}
+      <Header/>
       <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home/>}/>
@@ -22,6 +23,7 @@ function App() {
         <Route path='/Profile' element={<Profile/>}/>
       </Routes>
       </BrowserRouter>
+      {/* <Hrprofile/> */}
       <Footer/>
     </div>
   );
