@@ -5,7 +5,6 @@ import img2 from '../../assets/client2.svg';
 import img3 from '../../assets/client3.svg';
 import blog1 from '../../assets/blog1.svg';
 import blog2 from '../../assets/blog2.svg'
-import C4 from './card4';
 import C6 from './card6';
 
 const H7 = () => {

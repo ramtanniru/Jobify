@@ -6,7 +6,9 @@ import img3 from '../../assets/f3.svg';
 import img4 from '../../assets/f4.svg';
 
 const H5 = () => {
-    const card1 = {img:img1,head:'Job Recommendation',body:'Discover personalized job suggestions curated to match your skills, goals with our Job Recommendation feature.'};
+    const card1 = {img:img1,
+      head:'Job Recommendation',
+      body:'Discover personalized job suggestions curated to match your skills, goals with our Job Recommendation feature.'};
     const card2 = {img:img2,head:'Skills',body:'Evaluate and showcase your strengths with our Skills feature, allowing you to stand out in the competitive job market.'};
     const card3 = {img:img3,head:'AI Chatbot',body:'Efficient, Instant, and Always Available - Our AI Chatbot is here to elevate your job search experience.'};
     const card4 = {img:img4,head:'Ratings',body:'Highlight your strengths with our Skill Ratings feature, assessment of your abilities to potential employers.'};

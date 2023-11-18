@@ -10,7 +10,7 @@ const Header = () => {
     <>
       <nav className="navbar navbar-expand-sm navbar-light bg-light px-sm-3 shadow fixed-top">
         <div className="container-fluid col-12">
-          <a  className="navbar-brand d-flex flex-row gap-2 col-1" href="#">
+          <a  className="navbar-brand d-flex flex-row gap-2 col-1" href="/">
             <img src={logo} height={40}/><span className="head-sub-head fw-bold grad ">Jobify!</span>
           </a>
           <button
@@ -27,7 +27,7 @@ const Header = () => {
             <div className="col-lg-4 col-md-3 col-sm-2"></div>
             <ul class="col-lg-6 navbar-nav mb-2 mb-lg-0 col-sm-7 col-md-7 gap-sm-3">
               <li class="nav-item">
-                <a  class="nav-link active fw-bold" aria-current="page" href="">
+                <a  class="nav-link active fw-bold" aria-current="page" href="/">
                   HOME
                 </a>
               </li>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>
+    <div className=''>
         {/* Apply now */}
         <div className='position-relative mt-5 pt-3'>
             <div className='my-5'></div>
