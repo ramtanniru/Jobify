@@ -119,6 +119,7 @@ body{
   font-family: "Emilio Test";
   font-size: 48;
   font-weight: 600;
+  color: black;
 }
 .carousel-caption p{
   font-family: "Montserrat";
@@ -130,3 +131,57 @@ body{
   font-size: 18;
 }
 
+.modal-header .close {
+  border: none;
+  height: 40px;
+  width: 30px;
+  background-color: rgba(232, 226, 226, 0.823);
+  color: black;
+  font-weight: bold;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+.modal-title{
+  font-family: "Montserrat";
+  font-size: 18;
+  font-weight: bold;
+}
+.team-container{
+  height: 100vh;
+  background: linear-gradient(to bottom, #7F849A 50%, #FFFF 50%);
+  position: relative;
+  padding-top: 30px;
+}
+.image-container{
+  height:240px;
+}
+.img {
+  height: 200px;
+  border: 7px solid white;
+  border-radius: 100px;
+  box-shadow: 0 0 0 0.5px black;
+  padding: 2px;
+  margin: 2px;
+}
+
+
+.image-container{
+  background: transparent;
+  width:240px;
+  position: absolute;
+  top: 28%;
+}
+.card-container {
+  flex: 0 0 calc(20% - 20px); 
+  margin: 0 10px; 
+  box-sizing: border-box;
+}
+.card-container h4{
+  font-family: "Montserrat";
+  font-weight: bold;
+}
+.card-container p{
+  font-family: "Montserrat";
+  
+}
