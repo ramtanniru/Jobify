@@ -1,4 +1,10 @@
 import img1 from '../assets/client1.svg';
+import google from '../Icon/google.svg';
+import microsoft from '../Icon/microsoft.svg';
+import oracle from '../Icon/oracle.svg';
+import fb from '../Icon/fb.svg';
+import insta from '../Icon/insta.svg';
+import twitter from '../Icon/twitter.svg';
 export const jobs = [
     {
         id:1,
@@ -9,9 +15,81 @@ export const jobs = [
         body:"Create and maintain functional websites for online presence and interaction.",
         location:'Banglore',
         salary:"50-80k",
-        logo:'',
+        logo:google,
         company:"Google"
     },
+    {
+        id:2,
+        username:'hr_name',
+        role:"Developer",
+        type:"Full time",
+        head:"Web developer",
+        body:"Create and maintain functional websites for online presence and interaction.",
+        location:'Banglore',
+        salary:"50-80k",
+        logo:microsoft,
+        company:"Google"
+    },
+    {
+        id:3,
+        username:'hr_name',
+        role:"Developer",
+        type:"Full time",
+        head:"Web developer",
+        body:"Create and maintain functional websites for online presence and interaction.",
+        location:'Banglore',
+        salary:"50-80k",
+        logo:insta,
+        company:"Google"
+    },
+    {
+        id:4,
+        username:'hr_name',
+        role:"Developer",
+        type:"Full time",
+        head:"Web developer",
+        body:"Create and maintain functional websites for online presence and interaction.",
+        location:'Banglore',
+        salary:"50-80k",
+        logo:oracle,
+        company:"Google"
+    },
+    {
+        id:5,
+        username:'hr_name',
+        role:"Developer",
+        type:"Full time",
+        head:"Web developer",
+        body:"Create and maintain functional websites for online presence and interaction.",
+        location:'Banglore',
+        salary:"50-80k",
+        logo:fb,
+        company:"Google"
+    },
+    {
+        id:6,
+        username:'hr_name',
+        role:"Developer",
+        type:"Full time",
+        head:"Web developer",
+        body:"Create and maintain functional websites for online presence and interaction.",
+        location:'Banglore',
+        salary:"50-80k",
+        logo:twitter,
+        company:"Google"
+    },
+    {
+        id:7,
+        username:'hr_name',
+        role:"Developer",
+        type:"Full time",
+        head:"Web developer",
+        body:"Create and maintain functional websites for online presence and interaction.",
+        location:'Banglore',
+        salary:"50-80k",
+        logo:google,
+        company:"Google"
+    }
 ];
 
 export const applications = [

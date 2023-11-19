@@ -69,7 +69,6 @@ const H6 = () => {
         company:"Twitter"
     },
     ]
-  var i = 0;
   const colors = ['#F3287A',"#2C6BDB","#FEC200"];
   return (
     <div className='py-5' style={{backgroundColor:"#FAFAFA"}}>
@@ -98,7 +97,7 @@ const H6 = () => {
                 })
             } */}
             {arr.map((card, index) => (
-                <C4 key={index} arr={card} colour={colors[index % colors.length]} />
+                <C4 key={index} arr={card} colour={colors[index % colors.length]} disable={true}/>
             ))}
 
             </div>

@@ -32,7 +32,7 @@ const Header_2 = () => {
                 </a>
               </li>
               <li class="nav-item">
-                <a  class="nav-link fw-bold" href="Jobs">
+                <a  class="nav-link fw-bold" href="Job">
                   JOBS
                 </a>
               </li>
@@ -41,7 +41,7 @@ const Header_2 = () => {
               </li>
             </ul>
             <div className="col-lg-2 d-flex flex-row align-items-center justify-content-around">
-              <a>
+              <a className="" href="/HR">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" viewBox="0 0 24 30" fill="none">
                     <path d="M0 25.5V22.5H3V12C3 9.925 3.625 8.081 4.875 6.468C6.125 4.855 7.75 3.799 9.75 3.3V2.25C9.75 1.625 9.969 1.0935 10.407 0.655503C10.845 0.217503 11.376 -0.000996583 12 3.41685e-06C12.625 3.41685e-06 13.1565 0.219003 13.5945 0.657003C14.0325 1.095 14.251 1.626 14.25 2.25V3.3C16.25 3.8 17.875 4.8565 19.125 6.4695C20.375 8.0825 21 9.926 21 12V22.5H24V25.5H0ZM12 30C11.175 30 10.4685 29.706 9.8805 29.118C9.2925 28.53 8.999 27.824 9 27H15C15 27.825 14.706 28.5315 14.118 29.1195C13.53 29.7075 12.824 30.001 12 30Z" fill="black"/>
                 </svg>

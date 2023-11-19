@@ -69,7 +69,13 @@ const Application_card = ({arr}) => {
             )}
             {status === 'accepted' && (
             <div className='d-flex flex-row align-items-center gap-4'>
-                <button className='btn btn-success col-10' disabled onClick={handleAccept}>Accepted
+                <button className='btn btn-success form-control' disabled onClick={handleAccept}>Accepted
+                </button>
+            </div>
+            )}
+            {status === 'rejected' && (
+            <div className='d-flex flex-row align-items-center gap-4'>
+                <button className='btn btn-danger form-control' disabled onClick={handleReject}>Rejected
                 </button>
             </div>
             )}
